@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:future_jobs/pages/home_page.dart';
+import 'package:future_jobs/pages/started_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashPage extends StatefulWidget {
@@ -18,7 +18,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(context, MaterialPageRoute(
-        builder: (context) => HomePage()
+        builder: (context) => GetStartedPage()
       ));
     });
   }
