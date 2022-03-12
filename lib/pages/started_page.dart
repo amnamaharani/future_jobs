@@ -3,13 +3,15 @@ import 'package:future_jobs/pages/signin_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GetStartedPage extends StatelessWidget {
+  const GetStartedPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/background.png'),
                 fit: BoxFit.cover,
@@ -30,7 +32,7 @@ class GetStartedPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 20,), 
+                  const SizedBox(height: 20,), 
                   Text(
                     '18,000 jobs available',
                     style: GoogleFonts.poppins(
@@ -42,12 +44,12 @@ class GetStartedPage extends StatelessWidget {
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 400,),
-                      child: Container(
+                      child: SizedBox(
                         height: 45,
                         width: 200,
                         child: TextButton(
                           style: TextButton.styleFrom(
-                            backgroundColor: Color(0xffFFFFFF),
+                            backgroundColor: const Color(0xffFFFFFF),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(66),
                             ),
@@ -58,7 +60,7 @@ class GetStartedPage extends StatelessWidget {
                             style: GoogleFonts.poppins(
                               fontSize: 14, 
                               fontWeight: FontWeight.w500, 
-                              color: Color(0xff4141A4),
+                              color: const Color(0xff4141A4),
                             ),
                           ),
                         ),
@@ -68,18 +70,18 @@ class GetStartedPage extends StatelessWidget {
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 16),
-                      child: Container(
+                      child: SizedBox(
                         height: 45,
                         width: 200,
                         child: OutlinedButton(
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SignIn()),
+                              MaterialPageRoute(builder: (context) => const SignIn()),
                             );
                           },
                           style: OutlinedButton.styleFrom(
-                            side: BorderSide(color: Colors.white),
+                            side: const BorderSide(color: Colors.white),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(66),
                             ),

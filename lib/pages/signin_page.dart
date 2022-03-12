@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:email_validator/email_validator.dart';
 
 class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
+
   @override
   State<SignIn> createState() => _SignInState();
 }
@@ -32,12 +34,12 @@ class _SignInState extends State<SignIn> {
                   'Sign In',
                   style: titleTextStyle,
                 ),
-                SizedBox(height: 2,),
+                const SizedBox(height: 2,),
                 Text(
                   'Build Your Career',
                   style: subTitleTextStyle,
                 ),
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
                 Center(
                   child: Column(
                     children: [
@@ -49,7 +51,7 @@ class _SignInState extends State<SignIn> {
                     ],
                   ),
                 ),
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -57,12 +59,14 @@ class _SignInState extends State<SignIn> {
                       'Email Address', 
                       style: titleTextStyle,
                     ),
-                    SizedBox(height: 8,),
+                    const SizedBox(height: 8,),
                     TextFormField(
                       controller: emailController,
                       onChanged: (value) {
+                        // ignore: avoid_print
                         print(value); 
                         bool isValid = EmailValidator.validate(value);
+                        // ignore: avoid_print
                         print(isValid);
                         if (isValid) {
                           setState(() {
@@ -76,7 +80,7 @@ class _SignInState extends State<SignIn> {
                         }
                       },
                       decoration: InputDecoration(
-                        fillColor: Color(0xffF1F0F5),
+                        fillColor: const Color(0xffF1F0F5),
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100),
@@ -85,28 +89,28 @@ class _SignInState extends State<SignIn> {
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100),
                           borderSide: BorderSide(color:isEmailValid 
-                          ? Color(0xff4141A4) 
-                          : Color(0xffFD4F56)
+                          ? const Color(0xff4141A4) 
+                          : const Color(0xffFD4F56)
                           ),
                         ),
                         hintText: '',
                       ),
                       style: TextStyle(
                         color: isEmailValid 
-                          ? Color(0xff4141A4) 
-                          : Color(0xffFD4F56)
+                          ? const Color(0xff4141A4) 
+                          : const Color(0xffFD4F56)
                       ),
                     ),
-                    SizedBox(height: 20,),
+                    const SizedBox(height: 20,),
                     Text(
                       'Password', 
                       style: titleTextStyle,
                     ),
-                    SizedBox(height: 8,),
+                    const SizedBox(height: 8,),
                     TextFormField(
                       obscureText: true,
                       decoration: InputDecoration(
-                        fillColor: Color(0xffF1F0F5),
+                        fillColor: const Color(0xffF1F0F5),
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100),
@@ -114,20 +118,20 @@ class _SignInState extends State<SignIn> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100),
-                          borderSide: BorderSide(color: Color(0xff4141A4)),
+                          borderSide: const BorderSide(color: Color(0xff4141A4)),
                         ),
                         hintText: '',
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 40,),
-                Container(
+                const SizedBox(height: 40,),
+                SizedBox(
                   width: 400,
                   height: 50,
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: Color(0xff4141A4),
+                      backgroundColor: const Color(0xff4141A4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(66),
                       ),
@@ -145,7 +149,7 @@ class _SignInState extends State<SignIn> {
                     child: Text(
                       'Create New Account', 
                       style: GoogleFonts.poppins(
-                        color: Color(0xffB3B5C4),
+                        color: const Color(0xffB3B5C4),
                         fontSize: 14, 
                         fontWeight: FontWeight.w300,
                       ),
