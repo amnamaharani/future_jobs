@@ -135,6 +135,41 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        unselectedItemColor: const Color(0xffB3B5C4),
+        selectedItemColor: const Color(0xff272C2F),
+        currentIndex: 0,
+        elevation: 0,
+        iconSize: 24,
+        items: const [
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/navbar_1.png'),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/navbar_2.png'),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/navbar_3.png'),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/navbar_4.png'),
+            ),
+            label: '',
+          ),
+        ],
+      ),
     );
   }
 }
