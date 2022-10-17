@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        showSelectedLabels: false,
+        showSelectedLabels: true,
         unselectedItemColor: const Color(0xffB3B5C4),
         selectedItemColor: const Color(0xff272C2F),
         currentIndex: 0,
