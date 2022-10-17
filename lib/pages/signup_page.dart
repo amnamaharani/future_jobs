@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:future_jobs/pages/signin_page.dart';
+import 'package:future_jobs/pages/home_page.dart';
 import 'package:future_jobs/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUp extends StatefulWidget {
+  const SignUp({Key? key}) : super(key: key);
+
   @override
   State<SignUp> createState() => _SignUpState();
 }
@@ -185,18 +187,23 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 50,),
+                  const SizedBox(height: 50,),
                   SizedBox(
                     width: 400,
                     height: 50,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        backgroundColor: Color(0xff4141A4),
+                        backgroundColor: const Color(0xff4141A4),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(66),
                         )
                       ),
-                      onPressed: () {}, 
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const HomePage()),
+                        );
+                      }, 
                       child: Text(
                         'Sign Up',
                         style: buttonTextStyle,
@@ -211,7 +218,7 @@ class _SignUpState extends State<SignUp> {
                         Navigator.push(
                           context, 
                           MaterialPageRoute(
-                            builder: (context) => SignIn()),
+                            builder: (context) => const HomePage()),
                         );
                       },
                       child: Text(

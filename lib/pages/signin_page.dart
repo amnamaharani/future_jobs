@@ -152,7 +152,7 @@ class _SignInState extends State<SignIn> {
                         Navigator.push(
                           context, 
                           MaterialPageRoute(
-                            builder: (context) => SignUp()),
+                            builder: (context) => const SignUp()),
                         );
                       },
                       child: Text(
