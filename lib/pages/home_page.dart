@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:future_jobs/theme.dart';
+import 'package:future_jobs/widgets/custom_list.dart';
 import 'package:future_jobs/widgets/job_card.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -60,27 +60,27 @@ class HomePage extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: [
+                children: const [
                   JobCard(
                     text: 'Website Developer', 
                     imageUrl: 'assets/card_category.png',
                   ),
-                  const SizedBox(width: 16,),
+                  SizedBox(width: 16,),
                   JobCard(
                     text: 'Mobile Developer', 
                     imageUrl: 'assets/card_category2.png',
                   ),
-                  const SizedBox(width: 16,),
+                  SizedBox(width: 16,),
                   JobCard(
                     text: 'App Designer', 
                     imageUrl: 'assets/card_category3.png',
                   ),
-                  const SizedBox(width: 16,),
+                  SizedBox(width: 16,),
                   JobCard(
                     text: 'Content Writer', 
                     imageUrl: 'assets/card_category4.png',
                   ),
-                  const SizedBox(width: 16,),
+                  SizedBox(width: 16,),
                   JobCard(
                     text: 'Video Grapher', 
                     imageUrl: 'assets/card_category5.png',
@@ -95,34 +95,31 @@ class HomePage extends StatelessWidget {
               'Just Posted',
               style: titlePropertiesStyle,
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 26,
-              ),
-              child: Row(
-                children: [
-                  Image.asset(
-                    'assets/google_icon.png',
-                    width: 44,
-                    height: 45,
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: const [
+                  CustomList(
+                    jobTitle: 'Front-End Developer', 
+                    companyName: 'Google', 
+                    imageUrl: 'assets/google_icon.png'
                   ),
-                  const SizedBox(width: 27,),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Front-End Developer',
-                        style: jobTextStyle,
-                      ),
-                       Text(
-                        'Google',
-                        style: companyTextStyle,
-                      ),
-                    ],
+                  CustomList(
+                    jobTitle: 'UI Designer', 
+                    companyName: 'Instagram', 
+                    imageUrl: 'assets/instagram_icon.png'
                   ),
+                  CustomList(
+                    jobTitle: 'Data Scientist', 
+                    companyName: 'Facebook', 
+                    imageUrl: 'assets/facebook_icon.png'
+                  ),
+                  SizedBox(height: 16.5,),
                 ],
               ),
             ),
+           
+            
           ],
         ),
       );

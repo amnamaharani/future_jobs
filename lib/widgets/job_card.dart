@@ -6,10 +6,11 @@ class JobCard extends StatelessWidget {
   final String text;
   final String imageUrl;
 
-  JobCard({
+  const JobCard({
+    Key? key, 
     required this.text,
     required this.imageUrl,
-  });
+  }) : super(key: key);
     
   
   @override
