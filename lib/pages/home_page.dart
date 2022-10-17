@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
           top: 30,
           left: 24,
           right: 24,
+          bottom: 30,
         ),
         child: Row(
           children: [
@@ -53,11 +54,7 @@ class HomePage extends StatelessWidget {
           children: [
             Text(
               'Hot Categories',
-              style: GoogleFonts.poppins(
-                color: const Color(0xff272C2F),
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-              ),
+              style: titlePropertiesStyle
             ),
             const SizedBox(height: 16,),
             SingleChildScrollView(
@@ -87,6 +84,41 @@ class HomePage extends StatelessWidget {
                   JobCard(
                     text: 'Video Grapher', 
                     imageUrl: 'assets/card_category5.png',
+                  ),
+                ],
+              ),
+            ),
+
+            // Just Posted
+            const SizedBox(height: 30,),
+            Text(
+              'Just Posted',
+              style: titlePropertiesStyle,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 26,
+              ),
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/google_icon.png',
+                    width: 44,
+                    height: 45,
+                  ),
+                  const SizedBox(width: 27,),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Front-End Developer',
+                        style: jobTextStyle,
+                      ),
+                       Text(
+                        'Google',
+                        style: companyTextStyle,
+                      ),
+                    ],
                   ),
                 ],
               ),
