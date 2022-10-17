@@ -46,6 +46,7 @@ class HomePage extends StatelessWidget {
       return Container(
         padding: const EdgeInsets.only(
           left: 24,
+          right: 24,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,9 +60,36 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16,),
-            JobCard(
-              text: 'Website Developer', 
-              imageUrl: 'assets/card_category.png',
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  JobCard(
+                    text: 'Website Developer', 
+                    imageUrl: 'assets/card_category.png',
+                  ),
+                  const SizedBox(width: 16,),
+                  JobCard(
+                    text: 'Mobile Developer', 
+                    imageUrl: 'assets/card_category2.png',
+                  ),
+                  const SizedBox(width: 16,),
+                  JobCard(
+                    text: 'App Designer', 
+                    imageUrl: 'assets/card_category3.png',
+                  ),
+                  const SizedBox(width: 16,),
+                  JobCard(
+                    text: 'Content Writer', 
+                    imageUrl: 'assets/card_category4.png',
+                  ),
+                  const SizedBox(width: 16,),
+                  JobCard(
+                    text: 'Video Grapher', 
+                    imageUrl: 'assets/card_category5.png',
+                  ),
+                ],
+              ),
             ),
           ],
         ),
