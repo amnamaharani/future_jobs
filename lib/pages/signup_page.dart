@@ -12,6 +12,50 @@ class _SignUpState extends State<SignUp> {
 
   bool isUploaded = false;
 
+  Widget uploadedImages() {
+      return Center(
+        child: InkWell(
+          onTap: () {
+            setState(() {
+              isUploaded = !isUploaded;
+            });
+          },
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/avatar_add.png',
+                width: 120,
+                height: 120,
+              ),
+              
+            ],
+          ),
+        ),
+      );
+  }
+
+  Widget showedImages() {
+      return Center(
+        child: InkWell(
+          onTap: () {
+            setState(() {
+              isUploaded = !isUploaded;
+            });
+          },
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/show_image.png',
+                width: 120,
+                height: 120,
+              ),
+              
+            ],
+          ),
+        ),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,17 +83,8 @@ class _SignUpState extends State<SignUp> {
                       style: subTitleTextStyle,
                     ),
                     const SizedBox(height: 30,),
-                    Center(
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/avatar_add.png',
-                          width: 120,
-                          height: 120,
-                        ),
-                      ],
-                    ),
-                  ),
+                    //Image
+                    isUploaded ? showedImages() : uploadedImages(),
                   const SizedBox(height: 50,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
