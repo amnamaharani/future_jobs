@@ -20,7 +20,10 @@ class JobCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const SecondHomePage()),
+          MaterialPageRoute(builder: (context) => SecondHomePage(
+            jobTitleName: text,
+            imageUrl: imageUrl,
+          )),
         );
       },
       child: Container(
