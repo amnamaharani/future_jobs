@@ -44,3 +44,15 @@ TextStyle companyTextStyle = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w400,
 );
+
+TextStyle jobTitleTextStyle = GoogleFonts.poppins(
+  color: const Color(0xffFFFFFF),
+  fontSize: 24,
+  fontWeight: FontWeight.w600,
+);
+
+TextStyle availableJobTextStyle = GoogleFonts.poppins(
+  color: const Color(0xffFFFFFF),
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+);
