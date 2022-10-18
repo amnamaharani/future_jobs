@@ -95,28 +95,25 @@ class HomePage extends StatelessWidget {
               'Just Posted',
               style: titlePropertiesStyle,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: const [
-                  CustomList(
-                    jobTitle: 'Front-End Developer', 
-                    companyName: 'Google', 
-                    imageUrl: 'assets/google_icon.png'
-                  ),
-                  CustomList(
-                    jobTitle: 'UI Designer', 
-                    companyName: 'Instagram', 
-                    imageUrl: 'assets/instagram_icon.png'
-                  ),
-                  CustomList(
-                    jobTitle: 'Data Scientist', 
-                    companyName: 'Facebook', 
-                    imageUrl: 'assets/facebook_icon.png'
-                  ),
-                  SizedBox(height: 16.5,),
-                ],
-              ),
+            Column(
+              children: const [
+                CustomList(
+                  jobTitle: 'Front-End Developer', 
+                  companyName: 'Google', 
+                  imageUrl: 'assets/google_icon.png'
+                ),
+                CustomList(
+                  jobTitle: 'UI Designer', 
+                  companyName: 'Instagram', 
+                  imageUrl: 'assets/instagram_icon.png'
+                ),
+                CustomList(
+                  jobTitle: 'Data Scientist', 
+                  companyName: 'Facebook', 
+                  imageUrl: 'assets/facebook_icon.png'
+                ),
+                SizedBox(height: 16.5,),
+              ],
             ),
            
             
@@ -127,17 +124,20 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            header(),
-            body(),
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              header(),
+              body(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        showSelectedLabels: true,
+        showSelectedLabels: false,
         unselectedItemColor: const Color(0xffB3B5C4),
         selectedItemColor: const Color(0xff272C2F),
         currentIndex: 0,
